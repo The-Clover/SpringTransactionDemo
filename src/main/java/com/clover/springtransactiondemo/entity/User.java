@@ -9,7 +9,7 @@ package com.clover.springtransactiondemo.entity;
 public class User {
     private Integer id;
     private String name;
-    private String tag;
+    //private String tag;
 
     public Integer getId() {
         return id;
@@ -27,20 +27,11 @@ public class User {
         this.name = name;
     }
 
-    public String getTag() {
-        return tag;
-    }
-
-    public void setTag(String tag) {
-        this.tag = tag;
-    }
-
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", tag='" + tag + '\'' +
                 '}';
     }
 }

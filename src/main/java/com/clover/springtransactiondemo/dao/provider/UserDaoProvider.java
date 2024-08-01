@@ -20,9 +20,9 @@ public class UserDaoProvider {
                 if (null != user.getName()) {
                     VALUES("name", "#{name}");
                 }
-                if (null != user.getTag()) {
+/*                if (null != user.getTag()) {
                     VALUES("tag", "#{tag}");
-                }
+                }*/
             }
         }.toString();
     }

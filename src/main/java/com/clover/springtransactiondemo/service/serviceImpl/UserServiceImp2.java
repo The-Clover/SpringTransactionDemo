@@ -23,15 +23,17 @@ public class UserServiceImp2 implements UserService {
     @Autowired
     UserDao userDao;
 
-    @Transactional(propagation = Propagation.NESTED)
+    @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRES_NEW)
     @Override
     public void addUser() {
-        User user = new User();
-        user.setId(2);
-        user.setName("法外狂徒李四");
-        user.setTag("二号");
-        userDao.insertUser(user);
-        user.setTag("二号");
-        userDao.insertUser(user);
+        User user3 = new User();
+        user3.setId(3);
+        user3.setName("法外狂徒张三3");
+        userDao.insertUser(user3);
+
+        User user4 = new User();
+        user4.setId(3);
+        user4.setName("法外狂徒张三4");
+        userDao.insertUser(user4);
     }
 }

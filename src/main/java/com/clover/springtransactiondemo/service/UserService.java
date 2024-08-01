@@ -1,5 +1,7 @@
 package com.clover.springtransactiondemo.service;
 
+import org.springframework.transaction.annotation.Transactional;
+
 /**
  * @program: SpringTransactionDemo
  * @description: 用户服务
